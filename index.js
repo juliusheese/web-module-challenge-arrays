@@ -147,15 +147,19 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-
+array2 = [];
 function filterByWord(A,S){
-    var indices = [];
-    var idx = A.indexOf(S);
-    while (idx != -1) {
-    indices.push(idx);
-    idx = A.indexOf(S, idx + 1);
+   if ( A.includes(S)){
+       for (let i = 0; i < A.length; i++){
+           if (A[i].includes(S)){
+            array2.push(A[i]);
+           }
+       } 
+       console.log(array2);
+   }
+   else {
+    return false;
 }
-    
 }
 
 
